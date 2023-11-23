@@ -4,6 +4,11 @@ class GroupData:
     base_url = 'https://api-test-compose.gandiva.ru'
     base_url_web = 'https://web-test-compose.gandiva.ru'
 
+    button_at_work = '//*[@class="ga_change_status"]/button'
+    button_assign_yourself = '//*[@class="ga_change_status"]/button'
+    conduct_a_check = '//*[@id="to_resolved"]'
+
+
     users_id = {
         'boss1': {
             'id': 'ap_179904'

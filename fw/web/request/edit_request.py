@@ -36,12 +36,19 @@ class EditRequest(AnyPage):
         temp = result.find(':')
         return result[:temp]
 
-    def assign_request_to_yourself(self):
-        self.click_element((By.XPATH,  '//*[@id="is12"]/div/div/div[@class="ga_change_status"]/button'))
-
-    def transfer_to_examination(self):
+    def go_to_examination(self):
         self.click_element((By.XPATH, '//*[@id="to_resolved"]'))
 
-    def give_grade_to_work(self, grade):
-        self.click_element((By.XPATH, f'//*[@data-alt="{grade}"]'))
+    def assign_yourself(self):
+        self.click_element((By.XPATH,  '//*[@id="is12"]/div/div/div[@class="ga_change_status"]/button'))
+
+    def evaluate_the_work(self, estimation):
+        self.click_element((By.XPATH, f'//*[@data-alt="{estimation}"]'))
         self.send_keys((By.XPATH, '//*[@id="FeedbackComment"]'), 'test')
+
+    def presence_of_the_button(self, locator):
+        try:
+            self.find_element((By.XPATH, f'{locator}'))
+            return True
+        except:
+            return False
