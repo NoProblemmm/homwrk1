@@ -1,4 +1,5 @@
 from data.group_data import GroupData
+from fw.api.request.api_request import Request
 from fw.web.any_page import AnyPage
 from fw.web.driver_area import DriverArea
 from fw.web.logiin.log_in import Login
@@ -19,3 +20,4 @@ class ApplicationManager:
         self.main = Main(self)
         self.create_request = CreateRequest(self)
         self.edit_request = EditRequest(self)
+        self.api_request = Request()

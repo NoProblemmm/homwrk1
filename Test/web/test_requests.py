@@ -107,6 +107,5 @@ class TestRequests(PreCondition):
         self.APP.edit_request.evaluate_the_work()
         self.APP.edit_request.save_request()
 
-
         assert first_user_button_to_work
         assert first_user_button_assign_yourself
