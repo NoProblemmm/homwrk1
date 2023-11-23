@@ -110,7 +110,3 @@ class TestRequests(PreCondition):
 
         assert first_user_button_to_work
         assert first_user_button_assign_yourself
-
-
-
-

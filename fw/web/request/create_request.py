@@ -22,8 +22,9 @@ class CreateRequest(AnyPage):
         self.click_element((By.XPATH, '//div[@id="option-new"]'))
 
     def selection_of_the_gandiva_department(self):
+        time.sleep(4)
         self.click_element((By.XPATH, '//*[@id="Department_chosen"]'))
-        time.sleep(2)
+        time.sleep(4)
         self.send_keys((By.XPATH, '//div[@id="Department_chosen"]//input[@class="chosen-search-field"]'),
                                     ('Отдел тестирования Гандивы', Keys.ENTER))
 
